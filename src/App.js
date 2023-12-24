@@ -27,7 +27,7 @@ import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { useStateContext } from "./context/ContextProvider";
 
 const App = () => {
-    const {activeMenu} = useStateContext();
+    const { activeMenu } = useStateContext();
     return (
         <div>
             <BrowserRouter>
