@@ -12,7 +12,7 @@ import {
 import { useStateContext } from "../context/ContextProvider";
 
 const Ecommerce = () => {
-    const { currentColor } = useStateContext()
+    const { currentColor, currentMode } = useStateContext()
     return (
         <div className="mt-12">
             <div className="flex flex-wrap lg:flex-nowrap justify-center">
@@ -71,13 +71,13 @@ const Ecommerce = () => {
                     <div className="flex justify-between">
                         <p className="font-semibold text-xl">Revenue Updates</p>
                         <div className="flex items-center gap-4">
-                            <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
+                            <p className="flex items-center gap-2 text-[#404041] hover:drop-shadow-xl">
                                 <span>
                                     <FaDotCircle />
                                 </span>
                                 <span>Expense</span>
                             </p>
-                            <p className="flex items-center gap-2 text-green-400 hover:drop-shadow-xl">
+                            <p className="flex items-center gap-2 text-[#00bdae] hover:drop-shadow-xl">
                                 <span>
                                     <FaDotCircle />
                                 </span>
@@ -115,6 +115,7 @@ const Ecommerce = () => {
                                     width="250px"
                                     data={SparklineAreaData}
                                     color={currentColor}
+                                    background={currentMode === "Dark" ? "#33373E" : "#fff"}
                                 />
                             </div>
                             <div className="mt-10">
